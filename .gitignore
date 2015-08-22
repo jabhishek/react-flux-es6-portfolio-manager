@@ -1,0 +1,5 @@
+# Created by .ignore support plugin (hsz.mobi)
+client/jspm_packages
+.idea
+node_modules
+temp
