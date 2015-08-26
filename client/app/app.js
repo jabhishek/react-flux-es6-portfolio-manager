@@ -1,6 +1,9 @@
+import 'jquery';
+import 'bootstrap';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import Header from './common/header';
 import Home from './components/homePage';
 import About from './components/about/aboutPage';
 
@@ -20,6 +23,7 @@ class App extends React.Component {
 
         return (
             <div>
+                <Header/>
                 <Child/>
             </div>
         );

@@ -23,6 +23,7 @@ System.config({
     "bootstrap": "github:twbs/bootstrap@3.3.5",
     "core-js": "npm:core-js@0.9.18",
     "flux": "npm:flux@2.1.1",
+    "jquery": "github:components/jquery@2.1.4",
     "react": "npm:react@0.14.0-beta3",
     "react-dom": "npm:react-dom@0.14.0-beta3",
     "react-router": "npm:react-router@1.0.0-beta3",
