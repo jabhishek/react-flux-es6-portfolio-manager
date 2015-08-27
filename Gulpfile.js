@@ -11,6 +11,10 @@ var builder = require('jspm');
 var del = require('del');
 var path = require('path');
 var eslint = require("gulp-eslint");
+var minify = require("gulp-minify");
+var minifyCss = require("gulp-minify-css");
+
+
 var scripts = ['client/app/*.js'];
 
 var config = {
@@ -20,17 +24,17 @@ var config = {
 			server: 'server/**/*.js'
 		},
 		css: {
-			app: ['client/app.css'],
+			app: ['client/assets/app.css'],
 			vendors: ['client/jspm_packages/github/twbs/bootstrap@3.3.5/css/bootstrap.css']
 		},
-		less: ['client/app.less']
+		less: ['client/assets/app.less']
 	}
 };
 
 gulp.task('less', function() {
 	return gulp.src(config.source.less)
 		.pipe($gulp.less())
-		.pipe(gulp.dest('client'));
+		.pipe(gulp.dest('client/assets'));
 });
 
 gulp.task('karma', function(cb) {
@@ -96,6 +100,8 @@ gulp.task('default', function () {
 	runSequence('less', 'server:start', 'watch');
 });
 
+
+
 /* Distribution tasks */
 gulp.task('clean', function(cb) {
 	del([
@@ -109,8 +115,10 @@ gulp.task('build:js', function (cb) {
 	});
 });
 
-gulp.task('build:css', function (cb) {
-	return gulp.src(config.source.css.vendors)
+gulp.task('build:css', ['less'], function () {
+	return gulp.src(config.source.css.app)
+		.pipe(minifyCss())
+		.pipe($gulp.rev())
 		.pipe(gulp.dest('build'));
 });
 
