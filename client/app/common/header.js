@@ -1,4 +1,6 @@
-import React from "react";
+import React from 'react';
+import Router from 'react-router';
+var Link = Router.Link;
 
 export default class Header extends React.Component {
     constructor(props) {
@@ -10,7 +12,8 @@ export default class Header extends React.Component {
             <nav className="navbar navbar-default">
                 <div className="container-fluid">
                     <ul className="nav nav-pills">
-                        <li><a href="/#">Home</a></li><li><a href="/#about">About</a></li>
+                        <Link to="home">Home</Link>
+                        <Link to="about">About</Link>
                     </ul>
                 </div>
             </nav>

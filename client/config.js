@@ -22,9 +22,8 @@ System.config({
     "babel-runtime": "npm:babel-runtime@5.6.20",
     "core-js": "npm:core-js@0.9.18",
     "flux": "npm:flux@2.1.1",
-    "react": "npm:react@0.14.0-beta3",
-    "react-dom": "npm:react-dom@0.14.0-beta3",
-    "react-router": "npm:react-router@1.0.0-beta3",
+    "react": "npm:react@0.13.3",
+    "react-router": "npm:react-router@0.13.3",
     "systemjs/plugin-text": "github:systemjs/plugin-text@0.0.2",
     "text": "github:systemjs/plugin-text@0.0.2",
     "github:jspm/nodelibs-buffer@0.1.0": {
@@ -95,14 +94,6 @@ System.config({
       "fbjs": "npm:fbjs@0.1.0-alpha.7",
       "process": "github:jspm/nodelibs-process@0.1.1"
     },
-    "npm:fbjs@0.1.0-alpha.4": {
-      "core-js": "npm:core-js@1.1.1",
-      "fs": "github:jspm/nodelibs-fs@0.1.2",
-      "path": "github:jspm/nodelibs-path@0.1.0",
-      "process": "github:jspm/nodelibs-process@0.1.1",
-      "promise": "npm:promise@7.0.4",
-      "whatwg-fetch": "npm:whatwg-fetch@0.9.0"
-    },
     "npm:fbjs@0.1.0-alpha.7": {
       "core-js": "npm:core-js@1.1.1",
       "fs": "github:jspm/nodelibs-fs@0.1.2",
@@ -120,10 +111,6 @@ System.config({
     "npm:inherits@2.0.1": {
       "util": "github:jspm/nodelibs-util@0.1.0"
     },
-    "npm:invariant@2.1.0": {
-      "envify": "npm:envify@3.4.0",
-      "process": "github:jspm/nodelibs-process@0.1.1"
-    },
     "npm:jstransform@10.1.0": {
       "base62": "npm:base62@0.1.1",
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",
@@ -139,20 +126,15 @@ System.config({
       "asap": "npm:asap@2.0.3",
       "fs": "github:jspm/nodelibs-fs@0.1.2"
     },
-    "npm:react-dom@0.14.0-beta3": {
-      "fbjs": "npm:fbjs@0.1.0-alpha.4",
-      "react": "npm:react@0.14.0-beta3"
-    },
-    "npm:react-router@1.0.0-beta3": {
-      "invariant": "npm:invariant@2.1.0",
-      "keymirror": "npm:keymirror@0.1.1",
+    "npm:react-router@0.13.3": {
+      "object-assign": "npm:object-assign@2.1.1",
+      "process": "github:jspm/nodelibs-process@0.1.1",
       "qs": "npm:qs@2.4.1",
-      "warning": "npm:warning@1.0.2"
+      "react": "npm:react@0.13.3"
     },
-    "npm:react@0.14.0-beta3": {
+    "npm:react@0.13.3": {
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",
       "envify": "npm:envify@3.4.0",
-      "fbjs": "npm:fbjs@0.1.0-alpha.4",
       "process": "github:jspm/nodelibs-process@0.1.1"
     },
     "npm:readable-stream@1.1.13": {
@@ -187,9 +169,6 @@ System.config({
     },
     "npm:util@0.10.3": {
       "inherits": "npm:inherits@2.0.1",
-      "process": "github:jspm/nodelibs-process@0.1.1"
-    },
-    "npm:warning@1.0.2": {
       "process": "github:jspm/nodelibs-process@0.1.1"
     }
   }

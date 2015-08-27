@@ -110,7 +110,7 @@ gulp.task('clean', function(cb) {
 });
 
 gulp.task('build:js', function (cb) {
-	builder.bundleSFX('app/app', 'temp/app.js', { minify: true, mangle: true }).then(function(output) {
+	builder.bundleSFX('app/main', 'temp/app.js', { minify: true, mangle: true }).then(function(output) {
 		cb();
 	});
 });
