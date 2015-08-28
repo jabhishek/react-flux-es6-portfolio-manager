@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactAddons from 'react/addons';
 import Header from './common/header';
 import Router from 'react-router';
 

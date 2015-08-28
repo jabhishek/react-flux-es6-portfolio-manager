@@ -9,9 +9,9 @@ export default class Header extends React.Component {
 
     render() {
         return (
-            <nav className="navbar navbar-default">
-                <div className="container-fluid">
-                    <ul className="nav nav-pills">
+            <nav className="navbar">
+                <div className="container">
+                    <ul className="nav">
                         <Link to="home">Home</Link>
                         <Link to="about">About</Link>
                     </ul>

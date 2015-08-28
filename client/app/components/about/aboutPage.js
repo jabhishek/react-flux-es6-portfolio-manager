@@ -13,12 +13,13 @@ export default class AboutPage extends React.Component {
                 <p>This application uses the following technologies:-</p>
                 <ul>
                     <li>React</li>
+                    <li>Ecmascript 2015 (ES6)</li>
                     <li>React Router</li>
                     <li>Flux</li>
                     <li>Node</li>
+                    <li>Express</li>
                     <li>Gulp</li>
                     <li>jspm</li>
-                    <li>Bootstrap</li>
                 </ul>
 
             </div>

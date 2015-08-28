@@ -46,8 +46,8 @@ module.exports = function (config) {
         singleRun: false,
 
         jspm: {
-            loadFiles: ['client/app/**/*spec.js'],
-            serveFiles: ['client/app/**/*.*'],
+            loadFiles: ['client/tests/**/*spec.js'],
+            serveFiles: ['client/app/**/*.*', 'client/tests/**/*.js'],
             config: "client/config.js",
             packages: "client/jspm_packages"
         },

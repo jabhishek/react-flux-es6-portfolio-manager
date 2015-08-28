@@ -1,5 +1,5 @@
 {
-  "name": "es6-jspm-web-starter",
+  "name": "es6-jspm-react-starter",
   "version": "1.0.0",
   "main": "server/app.js",
   "dependencies": {
