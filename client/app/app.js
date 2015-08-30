@@ -13,7 +13,9 @@ export default class App extends React.Component {
         return (
             <div>
                 <Header/>
-                <RouteHandler />
+                <div className="view">
+                    <RouteHandler />
+                </div>
             </div>
         );
     }

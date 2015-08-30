@@ -71,7 +71,7 @@ gulp.task('watch', function () {
 	if (!argv.production) {
 		gulp.watch([config.source.js.server], ['server:restart']);
 		gulp.watch([config.source.js.app], ['lint']);
-		gulp.watch(config.source.less, ['less']);
+		gulp.watch(['client/assets/**/*.less'], ['less']);
 		gulp.watch([
 			'client/index.html', config.source.css.app, config.source.js.app
 		], $gulp.livereload.changed);
