@@ -9,7 +9,3 @@ This is a basic React starter app built on ES6 modules, nodejs, jspm, babel, gul
 ### Build process
 Run gulp dist to build assets for production.  
 Now you can also run 'gulp --production' to run the app in production mode, which will serve the build files from dist folder.
-
-### Todo: 
-1. Add unit tests
-

@@ -14,10 +14,11 @@ export default class AboutPage extends React.Component {
                 <ul>
                     <li>React</li>
                     <li>Ecmascript 2015 (ES6)</li>
+                    <li>Nodejs</li>
+                    <li>Express</li>
+                    <li>Mongodb</li>
                     <li>React Router</li>
                     <li>Flux</li>
-                    <li>Node</li>
-                    <li>Express</li>
                     <li>Gulp</li>
                     <li>jspm</li>
                 </ul>
