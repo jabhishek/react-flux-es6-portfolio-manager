@@ -1,6 +1,11 @@
-module.exports = function (app) {
+var PortfolioManager = require("./api/portfolios");
+
+
+module.exports = function (app, db) {
 	"use strict";
-	app.use('/api/todos', require('./api/todos'));
+	var portfolioManager = new PortfolioManager(db);
+
+	app.use('/api/portfolios', portfolioManager.getPortfolios);
 
 	// All other routes should redirect to the index.html
 	app.route('/*')
