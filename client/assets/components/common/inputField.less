@@ -1,0 +1,39 @@
+.input-container {
+  display: flex;
+  flex-direction: column;
+
+  input, label {
+    line-height: 2rem;
+    border: none;
+  }
+
+  input {
+    font-size: 1.6rem;
+    -webkit-appearance: none;
+    outline: none;
+    border-bottom: 1px solid #ccc;
+  }
+
+  label {
+    transition: 0.3s;
+    transform: translate3d(0, 27px, 0) scale(1);
+    transform-origin: left top;
+    color: #555;
+    transition: transform 0.3s;
+  }
+
+  &.focus, &.dirty {
+    label {
+      transform: translate3d(0, 6px, 0) scale(0.8);
+    }
+  }
+
+  &.focus {
+    label {
+      color: @pink;
+    }
+  }
+  input {
+    padding: 5px 0;
+  }
+}

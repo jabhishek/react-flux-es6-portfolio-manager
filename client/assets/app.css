@@ -1,9 +1,6 @@
-/*@accent-colour: #03a9f4;*/
 *,
 *:before,
 *:after {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 html,
@@ -159,9 +156,45 @@ select {
 html {
   font-size: 62.5%;
   font-family: 'Raleway';
+  height: 100%;
+}
+input {
+  font-family: 'Raleway';
 }
 body {
   font-size: 1.4rem;
+  height: 100%;
+}
+#app {
+  height: 100%;
+}
+#app .loading {
+  height: 100%;
+  background: #eeeeee;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+#app .loading .loading-items {
+  font-size: 4rem;
+  text-align: center;
+}
+#app .loading .loading-items .text {
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 1rem;
+}
+#app .loading .loading-items i {
+  display: inline-block;
 }
 a {
   text-decoration: none;
@@ -185,30 +218,44 @@ h2 {
   color: white;
 }
 .navbar .container {
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
   height: 5rem;
   line-height: 5rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
   flex-direction: column;
   border-bottom: 1px solid #222;
 }
 @media (min-width: 720px) {
   .navbar .container {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
     flex-direction: row;
     border-bottom: none;
   }
 }
 .navbar .container .navbar-header {
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
   flex-direction: row;
 }
 @media (min-width: 720px) {
   .navbar .container .navbar-header {
+    -webkit-flex: 1;
+    -ms-flex: 1;
     flex: 1;
   }
 }
 .navbar .container .navbar-header .app-title {
   font-size: 2rem;
   color: white;
+  -webkit-flex: 1;
+  -ms-flex: 1;
   flex: 1;
 }
 .navbar .container .navbar-header .app-title a {
@@ -247,6 +294,8 @@ h2 {
   .navbar .container .nav {
     display: block;
     text-align: right;
+    -webkit-flex: 1;
+    -ms-flex: 1;
     flex: 1;
   }
   .navbar .container .nav li {
@@ -259,4 +308,106 @@ h2 {
     height: 5rem;
     padding: 0 10px;
   }
+}
+.register {
+  width: 100%;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  margin-top: 50px;
+}
+.form-container {
+  width: 100%;
+  padding: 10px;
+}
+.form-container .input-container {
+  margin-bottom: 15px;
+  width: 100%;
+}
+.form-container input.button {
+  margin-top: 10px;
+}
+form {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.input-container {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.input-container input,
+.input-container label {
+  line-height: 2rem;
+  border: none;
+}
+.input-container input {
+  font-size: 1.6rem;
+  -webkit-appearance: none;
+  outline: none;
+  border-bottom: 1px solid #ccc;
+}
+.input-container label {
+  transition: 0.3s;
+  -webkit-transform: translate3d(0, 27px, 0) scale(1);
+  transform: translate3d(0, 27px, 0) scale(1);
+  -webkit-transform-origin: left top;
+  transform-origin: left top;
+  color: #555;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+}
+.input-container.focus label,
+.input-container.dirty label {
+  -webkit-transform: translate3d(0, 6px, 0) scale(0.8);
+  transform: translate3d(0, 6px, 0) scale(0.8);
+}
+.input-container.focus label {
+  color: #c51162;
+}
+.input-container input {
+  padding: 5px 0;
+}
+.button {
+  padding: 1rem 2rem;
+  font-size: 1.6rem;
+  outline: none;
+  background-color: #106cc8;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+.button:hover {
+  background-color: #0e5fb0;
 }

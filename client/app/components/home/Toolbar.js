@@ -23,7 +23,7 @@ export default class Toolbar extends React.Component {
                         {options}
                     </select>
                     <Link to="manageTransactions"
-                          params={{ user: this.props.user || '', portfolio: this.props.selectedPortfolio || '' }}>
+                          params={{ user: this.props.user, portfolio: this.props.selectedPortfolio }}>
                         Add Transactions
                     </Link>
                 </div>

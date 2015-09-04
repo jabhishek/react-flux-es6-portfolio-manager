@@ -13,7 +13,7 @@ var path = require('path');
 var eslint = require("gulp-eslint");
 var minify = require("gulp-minify");
 var minifyCss = require("gulp-minify-css");
-
+var autoprefixer = require('gulp-autoprefixer');
 
 var scripts = ['client/app/*.js'];
 
@@ -34,6 +34,10 @@ var config = {
 gulp.task('less', function() {
 	return gulp.src(config.source.less)
 		.pipe($gulp.less())
+		.pipe(autoprefixer({
+			browsers: ['last 2 versions'],
+			cascade: false
+		}))
 		.pipe(gulp.dest('client/assets'));
 });
 

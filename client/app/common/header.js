@@ -1,7 +1,7 @@
 import React from 'react/addons';
 import Router from 'react-router';
 var Link = Router.Link;
-var cx = React.addons.classSet;
+import classNames from 'classnames';
 
 export default class Header extends React.Component {
     constructor(props) {
@@ -20,9 +20,8 @@ export default class Header extends React.Component {
     }
 
     render() {
-        var navClassList = cx(
+        var navClassList = classNames("nav",
             {
-                'nav': true,
                 'expanded': this.state.isExpanded
             }
         );

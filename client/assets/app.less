@@ -6,10 +6,42 @@
 html {
   font-size: 62.5%;
   font-family: 'Raleway';
+  height: 100%;
+}
+
+input {
+  font-family: 'Raleway';
 }
 
 body {
   font-size: 1.4rem;
+  height: 100%;
+}
+
+#app {
+  height: 100%;
+  .loading {
+    height: 100%;
+    background: #eeeeee;
+    flex: 1;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    .loading-items {
+      font-size: 4rem;
+      text-align: center;
+      .text {
+        text-transform: uppercase;
+        display: block;
+        margin-bottom: 1rem;
+      }
+
+      i {
+        display: inline-block;
+      }
+    }
+  }
 }
 
 a {
@@ -37,3 +69,6 @@ h2 {
 }
 
 @import 'components/common/header.less';
+@import 'components/account/base';
+@import 'components/common/inputField';
+@import 'components/common/button';
