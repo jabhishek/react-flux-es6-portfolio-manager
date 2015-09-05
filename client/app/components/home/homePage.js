@@ -1,7 +1,7 @@
 import React from 'react';
 import Toolbar from './Toolbar';
 import _ from 'lodash';
-import Request from 'superagent';
+import portfolioApi from 'app/Apis/portfolioApi';
 
 export default class HomePage extends React.Component {
     constructor(props) {
@@ -10,21 +10,27 @@ export default class HomePage extends React.Component {
     }
 
     componentWillMount() {
-        Request.get("/api/portfolios")
-            .set('Accept', 'application/json')
-            .end((err, response) => {
-                var data = response.body;
-                if (data) {
-                    let portfolios = data.portfolios;
-                    if (_.isArray(portfolios)) {
-                        let selectedPortfolio = portfolios[0];
-                        this.setState({
-                            portfolios: portfolios,
-                            selectedPortfolio: selectedPortfolio
-                        });
-                    }
+
+        let handleData = (data) => {
+            if (data) {
+                let portfolios = data.portfolios;
+                if (_.isArray(portfolios)) {
+                    let selectedPortfolio = portfolios[0];
+                    this.setState({
+                        portfolios: portfolios,
+                        selectedPortfolio: selectedPortfolio
+                    });
                 }
-            });
+            }
+        };
+
+        portfolioApi.getPortfolios()
+            .then(
+                handleData,
+                (err) => {
+                    console.log(err);
+                }
+            );
     }
 
     portfolioChanged(event) {
