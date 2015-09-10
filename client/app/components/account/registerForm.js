@@ -1,5 +1,7 @@
 import React from 'react';
 import InputField from 'app/common/inputField';
+import userApi from 'app/Apis/userApi';
+
 class RegisterForm extends React.Component {
     constructor(props) {
         super(props);
@@ -20,7 +22,12 @@ class RegisterForm extends React.Component {
 
     submitForm(e) {
         e.preventDefault();
-        console.log(this.state);
+        userApi.createUser(this.state)
+            .then(function(data) {
+                console.log(data);
+            }, function(err) {
+                console.log(err);
+            });
     }
 
     render() {
