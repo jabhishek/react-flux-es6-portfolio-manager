@@ -24,6 +24,7 @@ System.config({
     "core-js": "npm:core-js@0.9.18",
     "flux": "npm:flux@2.1.1",
     "lodash": "npm:lodash@3.10.1",
+    "object-assign": "npm:object-assign@4.0.1",
     "react": "npm:react@0.13.3",
     "react-router": "npm:react-router@0.13.3",
     "superagent": "npm:superagent@1.3.0",
