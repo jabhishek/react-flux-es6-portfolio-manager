@@ -31,3 +31,10 @@ export default class Toolbar extends React.Component {
         );
     }
 }
+
+Toolbar.propTypes = {
+    "user": React.PropTypes.string,
+    "selectedPortfolio": React.PropTypes.string.isRequired,
+    "onPortfolioChanged": React.PropTypes.func.isRequired,
+    "portfolios": React.PropTypes.array.isRequired
+};

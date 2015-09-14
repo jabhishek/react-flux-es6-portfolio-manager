@@ -22,6 +22,7 @@ System.config({
     "babel-runtime": "npm:babel-runtime@5.6.20",
     "classnames": "npm:classnames@2.1.3",
     "core-js": "npm:core-js@0.9.18",
+    "events": "github:jspm/nodelibs-events@0.1.1",
     "flux": "npm:flux@2.1.1",
     "lodash": "npm:lodash@3.10.1",
     "object-assign": "npm:object-assign@4.0.1",

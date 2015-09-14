@@ -1,6 +1,6 @@
 import React from 'react';
 import InputField from 'app/common/inputField';
-import userApi from 'app/Apis/userApi';
+import userApi from 'app/Apis/usersApi';
 
 class RegisterForm extends React.Component {
     constructor(props) {
