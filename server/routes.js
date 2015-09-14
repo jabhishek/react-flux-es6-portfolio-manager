@@ -8,6 +8,8 @@ module.exports = function (app, db) {
 	var userManager = new UserManager(db);
 
 	app.get('/api/portfolios', portfolioManager.getPortfolios);
+	app.post('/api/portfolios', portfolioManager.addPortfolio);
+
 	app.use('/api/user', userManager.createUser);
 
 	// All other routes should redirect to the index.html

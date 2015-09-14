@@ -15,6 +15,17 @@ function PortfolioData(db) {
             }
         });
         return deferred.promise;
+    };
+    this.addPortfolio = function(user, portfolio) {
+        var deferred = Q.defer();
+        accounts.update({ _id: user}, { $push : { "portfolios" : portfolio } }, function(err, data) {
+            if (err) {
+                deferred.reject(err);
+            } else {
+                deferred.resolve(data);
+            }
+        });
+        return deferred.promise;
     }
 }
 
